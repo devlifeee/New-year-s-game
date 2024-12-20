@@ -292,6 +292,7 @@ while running:
     if player.rect.y > HEIGHT: 
         running = False  # Завершить игру, если игрок упал вниз 
  
+ 
     #отрисовываем фон, платформы, врагов и собираемые предметы 
     #screen.fill(WHITE)
     land = pygame.image.load("img\фон.jpg")
@@ -307,7 +308,7 @@ while running:
     enemies.draw(screen)
     collectibles.draw(screen)
     
-    
+
     #проверяем все возможные коллизии 
     check_collision_platforms(player, platforms_list) 
     check_collision_platforms(player, platform_start) 
