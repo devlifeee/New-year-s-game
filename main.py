@@ -307,6 +307,7 @@ while running:
     enemies.draw(screen)
     collectibles.draw(screen)
     
+    
     #проверяем все возможные коллизии 
     check_collision_platforms(player, platforms_list) 
     check_collision_platforms(player, platform_start) 
