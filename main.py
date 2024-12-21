@@ -110,9 +110,9 @@ class Collectible(pygame.sprite.Sprite):
         self.rect.x = x
         self.rect.y = y
 
-
+#платформы
 class Platform(pygame.sprite.Sprite):
-    def __init__(self, x, y, width, height, image_path="img\platform (1).png"): #Добавлен параметр image_path
+    def __init__(self, x, y, width, height, image_path="img/snow platform.png"): #Добавлен параметр image_path
         super().__init__()
         #Загрузка изображения
         try:
@@ -356,6 +356,6 @@ show_cutscene = False
 #    pygame.mixer.music.unpause() 
  
 # Загружаем изображение катсцены
-cutscene_image = pygame.image.load("img/New Piskel (8).png").convert() # Замените на путь к вашему изображению
+
 
 pygame.quit()
