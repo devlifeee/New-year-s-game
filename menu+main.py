@@ -12,7 +12,7 @@ screen = pygame.display.set_mode((width, height))
 def show_menu():
     screen.fill(BLACK)
     
-    # Загрузка изображения для кнопки "PLAY"
+    # Загрузка изображения для кнопки "Старт"
     play_image = pygame.image.load("img/start.png")  # Исправлено: заменен обратный слэш на прямой
     play_image = pygame.transform.scale(play_image, (300, 150))  # Увеличиваем размер кнопки
     
