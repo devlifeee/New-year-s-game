@@ -16,18 +16,18 @@ ARIAL_50 = pygame.font.SysFont("arial", 50)
 
 def show_menu():
     # Загрузка изображения фона
-    background_image = pygame.image.load("moeee\img\фон меню.png")  
+    background_image = pygame.image.load("img\фон меню.png")  
     background_image = pygame.transform.scale(background_image, (width, height))  # Масштабируем под размер экрана
     
     screen.blit(background_image, (0, 0))  # Отображаем фон
     
     # Загрузка изображения для кнопки "Старт"
-    play_image = pygame.image.load("moeee\img\start-button.png")  
+    play_image = pygame.image.load("img\start-button.png")  
     play_image = pygame.transform.scale(play_image, (500, 350))  
     play_rect = play_image.get_rect(center=(width // 2, height // 3))  
     
     # Загрузка изображения для кнопки "Настройки"
-    settings_image = pygame.image.load("moeee\img\settings.png")
+    settings_image = pygame.image.load("img\settings.png")
     settings_image = pygame.transform.scale(settings_image, (500, 350))
     settings_rect = settings_image.get_rect(center=(width // 2, height // 2 + 100))
     
@@ -67,7 +67,7 @@ def settings():
                     settings_running = False
 
 def show_game_over_menu():
-    background_image = pygame.image.load("moeee\img\фон.png")  
+    background_image = pygame.image.load("img\фон меню.png")  
     background_image = pygame.transform.scale(background_image, (width, height))  # Масштабируем под размер экрана
     screen.blit(background_image, (0, 0))  # Отображаем фон
     
@@ -113,12 +113,12 @@ BLACK = (0, 0, 0)
 display = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("НОВОГОДНЯЯ ИГРА")
 
-icon = pygame.image.load("moeee\img\MOROZ2.png")
+icon = pygame.image.load("img\MOROZ2.png")
 pygame.display.set_icon(icon)
 
 # Класс для игрока 
 class Player(pygame.sprite.Sprite): 
-    def __init__(self, x, y, width=60, height=60, image_path="moeee\img\DED_MOROZ.png"):
+    def __init__(self, x, y, width=60, height=60, image_path="img\DED_MOROZ.png"):
         super().__init__()
         # Загрузка изображения
         try:
@@ -142,7 +142,7 @@ class Player(pygame.sprite.Sprite):
 
 # Класс для патрулирующих врагов 
 class Enemy(pygame.sprite.Sprite): 
-    def __init__(self, x, y, width=60, height=60, image_path="moeee\img\гном.png"):
+    def __init__(self, x, y, width=60, height=60, image_path="img\гном.png"):
         super().__init__()
         # Загрузка изображения
         try:
@@ -168,7 +168,7 @@ class Enemy(pygame.sprite.Sprite):
 
 # Подарки
 class Collectible(pygame.sprite.Sprite):
-    def __init__(self, x, y, width=40, height=40, image_path="moeee\img\podarok.png"):
+    def __init__(self, x, y, width=40, height=40, image_path="img\podarok.png"):
         super().__init__()
         try:
             self.image = pygame.image.load(image_path).convert_alpha()
@@ -184,7 +184,7 @@ class Collectible(pygame.sprite.Sprite):
 
 # Платформы
 class Platform(pygame.sprite.Sprite):
-    def __init__(self, x, y, width, height, image_path="moeee\img\snow platform.png"):
+    def __init__(self, x, y, width, height, image_path="img\snow platform.png"):
         super().__init__()
         try:
             self.image = pygame.image.load(image_path).convert_alpha()
@@ -320,7 +320,7 @@ while running:
         if player.rect.y > HEIGHT: 
             game_over = True  # Игрок умер, показываем меню
 
-        land = pygame.image.load("moeee\img\больший фон2.png")
+        land = pygame.image.load("img\больший фон2.png")
         land = pygame.transform.scale(land, (WIDTH, HEIGHT)) 
         screen.blit(land, (0, 0))
 
